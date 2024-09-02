@@ -6,9 +6,7 @@ import VehiculosContext from '../context/VehiculoProvider';
 
 
 
-const VehiculosPage = ({ vehiculos }) => {
-  const { eliminarVehiculo } = useContext(VehiculosContext)
-  console.log(vehiculos)
+const VehiculosPage = () => {
   return (
     <div className="flex flex-col h-full p-6">
       <h1 className="text-2xl font-bold text-gray-800 mb-4">Vehiculos</h1>
