@@ -2,7 +2,7 @@ import React from "react";
 import { MdDeleteForever, MdNoteAdd, MdInfo } from "react-icons/md";
 import Mensaje from "./Alertas";
 
-const TablaAuditorio = () => {
+const TablaVehiculo = () => {
   return (
     <>
       <div className="flex justify-between items-center mb-4">
@@ -28,34 +28,24 @@ const TablaAuditorio = () => {
           </tr>
         </thead>
         <tbody>
-          {materias.map((materia, index) => {
-            return (
-              <tr className="border-b hover:bg-gray-300 text-center" key={materia._id}>
-                {console.log(materia.nombre)}
-                <td >{materia.nombre}</td>
-                <td >{materia.codigo}</td>
-                <td >{materia.creditos}</td>
-                <td className="py-2 px-4 border-b border-gray-200 flex">
-                  <MdNoteAdd
-                    className="h-7 w-7 text-slate-800 cursor-pointer inline-block mr-2"
-                    onClick={() => { /* Lógica para actualizar */ }}
-                  />
-                  <MdInfo
-                    className="h-7 w-7 text-slate-800 cursor-pointer inline-block mr-2"
-                    onClick={() => { /* Lógica para actualizar */ }}
-                  />
-                  <MdDeleteForever
-                    className="h-7 w-7 text-red-900 cursor-pointer inline-block"
-                    onClick={() => eliminarVehiculo(vehiculo._id)}
-                  />
-                </td>
-              </tr>
-            );
-          })}
+          <tr className="border-b hover:bg-gray-300 text-center">
+            <td >Marca</td>
+            <td >Modelo</td>
+            <td >Año</td>
+            <td >Placa</td>
+            <td >Color</td>
+            <td >Tipo</td>
+            <td >Kilometraje</td>
+            <td className="py-2 text-center">
+              <MdNoteAdd className="h-7 w-7 text-slate-800 cursor-pointer inline-block mr-2" />
+              <MdInfo className="h-7 w-7 text-slate-800 cursor-pointer inline-block mr-2" />
+              <MdDeleteForever className="h-7 w-7 text-red-900 cursor-pointer inline-block" />
+            </td>
+          </tr>
         </tbody>
       </table>
     </>
   );
 };
 
-export default TablaAuditorio;
+export default TablaVehiculo;

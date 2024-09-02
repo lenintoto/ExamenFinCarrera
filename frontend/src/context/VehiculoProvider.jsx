@@ -52,7 +52,7 @@ const VehiculoProvider = ({ children }) => {
             const confirmarAccion = confirm("Esta seguro de eliminar este vehiculo?")
             if (confirmarAccion) {
                 const token = localStorage.getItem("token")
-                const url = `${import.meta.env.VITE_BACKEND_URL}/vehiculo/eliminar/${id}`//Agregar la ruta del back
+                const url = `${import.meta.env.VITE_BACKEND_URL}/vehiculo/eliminar/${id}`//Agregar ruta del back
                 const options = {
                     headers: {
                         "Content-Type": "application/json",
