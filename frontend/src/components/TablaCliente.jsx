@@ -2,7 +2,7 @@ import React from "react";
 import { MdDeleteForever, MdNoteAdd, MdInfo } from "react-icons/md";
 import Mensaje from "./Alertas";
 
-const TablaSpeaker = () => {
+const TablaCliente = () => {
   return (
     <>
       <Mensaje tipo={"active"}>{"No existen registros"}</Mensaje>
@@ -13,24 +13,25 @@ const TablaSpeaker = () => {
             <th className="p-2">Nombre</th>
             <th className="p-2">Apellido</th>
             <th className="p-2">Cédula</th>
-            <th className="p-2">Especialidad</th>
             <th className="p-2">Ciudad</th>
+            <th className="p-2">Email</th>
             <th className="p-2">Teléfono</th>
-            <th className="p-2">Empresa</th>
+            <th className="p-2">Dirección</th>
+            <th className="p-2">Fecha de Nacimiento</th>
             <th className="p-2">Acciones</th>
           </tr>
         </thead>
         <tbody>
-          {/* Aquí puedes añadir la lógica para renderizar filas de datos */}
           <tr className="border-b hover:bg-gray-300 text-center">
             <td>1</td>
-            <td>Nombre del Conferencista</td>
+            <td>Nombre</td>
             <td>Apellido</td>
             <td>1234567890</td>
-            <td>Especialidad</td>
             <td>Ciudad</td>
-            <td>123456789</td>
-            <td>Empresa</td>
+            <td>alguien@example.com</td>
+            <td>0999999999</td>
+            <td>Calderón</td>
+            <td>15/09/1989</td>
             <td className="py-2 text-center">
               <MdNoteAdd className="h-7 w-7 text-slate-800 cursor-pointer inline-block mr-2" />
               <MdInfo className="h-7 w-7 text-slate-800 cursor-pointer inline-block mr-2" />
@@ -43,4 +44,4 @@ const TablaSpeaker = () => {
   );
 };
 
-export default TablaSpeaker;
+export default TablaCliente;

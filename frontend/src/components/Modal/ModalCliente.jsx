@@ -3,20 +3,24 @@ import axios from "axios";
 import Mensaje from "./alertas";
 import { useNavigate } from "react-router-dom";
 
-export const FormularioAuditorio = ({ auditorio, onClose }) => {
+
+export const ModalCliente = ({}) => {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
-    nombre: auditorio?.nombre ?? "",
-    capacidad: auditorio?.capacidad ?? "",
-    ubicacion: auditorio?.ubicacion ?? "",
-    descripcion: auditorio?.descripcion ?? "",
+    marca: vehiculo?.marca ?? "",
+    modelo: vehiculo?.capacidad ?? "",
+    anio_fabricacion: vehiculo?.anio_fabricacion ?? "",
+    placa: vehiculo?.placa ?? "",
+    color: vehiculo?.color ?? "",
+    tipo: vehiculo?.tipo ?? "",
+    descripcion: vehiculo?.descripcion ?? "",
   });
 
   const [mensaje, setMensaje] = useState({});
 
   useEffect(() => {
-    if (auditorio) {
+    if (cliente) {
       setForm({
         nombre: auditorio.nombre,
         capacidad: auditorio.capacidad,

@@ -10,8 +10,8 @@ const TablaReserva = () => {
         <thead className="bg-gray-800 text-slate-400">
           <tr>
             <th className="p-2">N°</th>
-            <th className="p-2">Conferencista</th>
-            <th className="p-2">Auditorio</th>
+            <th className="p-2">Cliente</th>
+            <th className="p-2">Vehiculo</th>
             <th className="p-2">Fecha</th>
             <th className="p-2">Descripción</th>
             <th className="p-2">Acciones</th>
@@ -21,8 +21,8 @@ const TablaReserva = () => {
           {/* Aquí puedes añadir la lógica para renderizar filas de datos */}
           <tr className="border-b hover:bg-gray-300 text-center">
             <td>1</td>
-            <td>Nombre del Conferencista</td>
-            <td>Nombre del Auditorio</td>
+            <td>Cliente</td>
+            <td>Vehiculo</td>
             <td>01/01/2024</td>
             <td>Descripción de la reserva</td>
             <td className="py-2 text-center">

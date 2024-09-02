@@ -2,21 +2,21 @@ import mongoose from 'mongoose';
 
 const { Schema } = mongoose;
 
-const reservaSchema = new Schema({
-  conferencista: {
+const rentaSchema = new Schema({
+  vehiculo: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Speaker',
+    ref: 'Vehiculo',
     required: true
   },
-  auditorio: {
+  cliente: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Auditorio',
+    ref: 'Cliente',
     required: true
   },
   fecha: {
     type: Date,
     required: true
-  },
+  }, 
   descripcion: {
     type: String,
     trim: true
@@ -31,10 +31,10 @@ const reservaSchema = new Schema({
   }
 });
 
-reservaSchema.pre('save', function(next) {
+rentaSchema.pre('save', function(next) {
   this.updatedAt = Date.now();
   next();
 });
 
-const Reserva = mongoose.model('Reserva', reservaSchema);
-export default Reserva; 
+const Renta = mongoose.model('Renta', rentaSchema);
+export default Renta; 

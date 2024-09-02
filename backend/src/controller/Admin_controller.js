@@ -3,13 +3,13 @@ import Admin from '../models/Admin.js';
 // Registrar un nuevo administrador
 export const registrarAdmin = async (req, res) => {
   try {
-    const { nombre, apellido, cedula, email, password } = req.body;
+    const { nombre, apellido, email, password } = req.body;
     const adminExistente = await Admin.findOne({ email });
     if (adminExistente) return res.status(400).json({ message: 'Ese email ya esta registrado' });
 
-    const admin = new Admin({ nombre, apellido, cedula, email, password });
+    const admin = new Admin({ nombre, apellido, email, password });
     await admin.save();
-    res.status(201).json({ message: 'Administrador registrado exitosamente' });
+    res.status(200).json({ message: 'Administrador registrado exitosamente' });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

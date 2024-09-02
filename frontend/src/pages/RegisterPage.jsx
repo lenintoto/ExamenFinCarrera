@@ -104,7 +104,7 @@ const RegisterPage = () => {
         <div className="text-center">
           <p className="text-gray-700 text-sm">
             Have an account?{' '}
-            <Link to="/" className="text-blue-500">
+            <Link to="/login" className="text-blue-500">
               Go to login
             </Link>
           </p>
