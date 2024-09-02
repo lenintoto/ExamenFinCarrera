@@ -29,6 +29,8 @@ const TablaVehiculo = () => {
         </thead>
         <tbody>
           <tr className="border-b hover:bg-gray-300 text-center">
+
+            <td >1</td>
             <td >Marca</td>
             <td >Modelo</td>
             <td >Año</td>
